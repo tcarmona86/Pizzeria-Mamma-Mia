@@ -11,7 +11,7 @@ function Home() {
       <Header />
        <div className="pizza-grid">
         <CardPizza
-          name="Napolitana"
+          nombre="Napolitana"
           descripcion={["La pizza napolitana, de masa tierna y delgada pero bordes altos, es la versión propia de la cocina napolitana de la pizza redonda. El término pizza napoletana, por su importancia histórica o regional, se emplea en algunas zonas como sinónimo de pizza tonda."]}
           precio={5950}
           ingredientes={["mozzarella", "tomates", "jamón", "orégano"]}
@@ -19,7 +19,7 @@ function Home() {
 
         />
         <CardPizza
-          name="Española"
+          nombre="Española"
           descripcion={["La pizza es una preparación culinaria que consiste en un pan plano, habitualmente de forma circular, elaborado con harina de trigo, levadura, agua y sal (a veces aceite de oliva) que comúnmente se cubre con salsa de tomate, queso y otros muchos ingredientes, y que se hornea a alta temperatura, tradicionalmente en un horno de leña"]}
           precio={6950}
           ingredientes={["mozzarella", "gorgonzola", "parmesano", "provolone"]}
@@ -27,7 +27,7 @@ function Home() {
 
         />
         <CardPizza
-          name="Pepperoni"
+          nombre="Pepperoni"
           descripcion={["La pizza es una preparación culinaria que consiste en un pan plano, habitualmente de forma circular, elaborado con harina de trigo, levadura, agua y sal (a veces aceite de oliva) que comúnmente se cubre con salsa de tomate, queso y otros muchos ingredientes, y que se hornea a alta temperatura, tradicionalmente en un horno de leña."]}
           precio={6950}
           ingredientes={["mozzarella", "pepperoni", "orégano"]}
@@ -35,21 +35,21 @@ function Home() {
 
         />
          <CardPizza
-  name="Cuatro Estaciones"
+  nombre="Cuatro Estaciones"
   descripcion={["La pizza es una preparación culinaria que consiste en un pan plano, habitualmente de forma circular, elaborado con harina de trigo, levadura, agua y sal (a veces aceite de oliva) que comúnmente se cubre con salsa de tomate, queso y otros muchos ingredientes, y que se hornea a alta temperatura, tradicionalmente en un horno de leña."  ]}
   precio={5990}
   ingredientes={["mozzarella", "salame", "aceitunas", "champiñones"]}
   img="https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-2000595_640_c.jpg?alt=media&token=61325b6e-a1e0-441e-b3b5-7335ba13e8be"
 />
          <CardPizza
-  name="Bacon"
+  nombre="Bacon"
   descripcion={["La pizza es una preparación culinaria que consiste en un pan plano, habitualmente de forma circular, elaborado con harina de trigo, levadura, agua y sal (a veces aceite de oliva) que comúnmente se cubre con salsa de tomate, queso y otros muchos ingredientes, y que se hornea a alta temperatura, tradicionalmente en un horno de leña."]}
   precio={6450}
   ingredientes={["mozzarella", "tomates cherry", "bacon", "orégano"]}
   img="https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-salame.jpg?alt=media&token=ab3d4bf8-01f2-4810-982b-bd7fb6b517b2"
 />
          <CardPizza
-  name="Pollo Picante"
+  nombre="Pollo Picante"
   descripcion={["La pizza es una preparación culinaria que consiste en un pan plano, habitualmente de forma circular, elaborado con harina de trigo, levadura, agua y sal (a veces aceite de oliva) que comúnmente se cubre con salsa de tomate, queso y otros muchos ingredientes, y que se hornea a alta temperatura, tradicionalmente en un horno de leña."]}
   precio={6450}
   ingredientes={["mozzarella", "pimientos", "pollo grillé","orégano"]}
