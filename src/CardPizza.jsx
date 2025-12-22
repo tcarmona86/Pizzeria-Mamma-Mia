@@ -1,13 +1,27 @@
 import { formatoPrecio } from './utils/formatoPrecio.js'
-function CardPizza({ nombre, ingredientes, precio, imagen }) {
+import { Link } from "react-router-dom";
+
+function CardPizza({ id, nombre, ingredientes, precio, img, descripcion }) {
   return (
     <div className="card-pizza">
-      <img src={imagen} alt={nombre} className="pizza-img" />
+      <img src={img} alt={nombre} className="pizza-img" />
       <h3>{nombre}</h3>
-      <p><strong>Ingredientes:</strong> {ingredientes}</p>
+
+      <p><strong>Descripción:</strong> {descripcion}</p>
+
+      <p><strong>Ingredientes:</strong></p>
+      <ul>
+        {ingredientes.map((ing, index) => (
+          <li key={index}>{ing}</li>
+        ))}
+      </ul>
+
       <p><strong>Precio:</strong> ${formatoPrecio(precio)}</p>
+
       <div className="pizza-buttons">
-        <button>Ver Más</button>
+        <Link to={`/pizza/${id}`}>
+          <button>Ver Más</button>
+        </Link>
         <button>Añadir</button>
       </div>
     </div>

@@ -1,38 +1,39 @@
+import { useState, useEffect } from "react";
 import './App.css'
 import Header from './Header.jsx'
 import CardPizza from './CardPizza.jsx'
-import napolitana from './assets/napolitana.jpg'
-import española from './assets/española.jpg'
-import pepperoni from './assets/pepperoni.jpg'
-import { formatoPrecio } from './utils/formatoPrecio.js'
+import { formatoPrecio } from "./utils/formatoPrecio.js";
+import { Link } from "react-router-dom";
+
 
 function Home() {
+  const [pizzas, setPizzas] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/pizzas")
+      .then((res) => res.json())
+      .then((data) => setPizzas(data))
+      .catch((error) => console.error("Error al cargar pizzas:", error));
+  }, []);
   return (
     <main className="home">
-      {}
       <Header />
-       <div className="pizza-grid">
-        <CardPizza
-          name="Napolitana"
-          precio={5950}
-          ingredientes={["mozzarella, tomates, jamón, orégano"]}
-          imagen={napolitana}
-        />
-        <CardPizza
-          name="Española"
-          precio={6950}
-          ingredientes={["mozzarella, gorgonzola, parmesano, provolone"]}
-          imagen={española}
-        />
-        <CardPizza
-          name="Pepperoni"
-          precio={6950}
-          ingredientes={["mozzarella, pepperoni, orégano"]}
-          imagen={pepperoni}
-        />
+      <div className="pizza-grid">
+        {pizzas.map((pizza) => (
+          <Link key={pizza.id} to={`/pizza/${pizza.id}`} style={{ textDecoration: "none", color: "inherit" }}>
+            <CardPizza 
+              id={pizza.id}
+              nombre={pizza.name}
+              descripcion={pizza.desc}
+              precio={pizza.price}
+              ingredientes={pizza.ingredients}
+              img={pizza.img}
+            />
+            </Link>
+          ))}
       </div>
     </main>
-  )
+  );
 }
 
-export default Home
+export default Home;

@@ -18,10 +18,10 @@ function Navbar() {
         {/* <li><Link to="/logout"className="nav-btn">Cerrar Sesión</Link></li> */}
 
       </ul>
-      <button className="cart-total">
-        <FaShoppingCart style={{ marginRight: '8px' }} />
-        Total: ${formatoPrecio(total)}
-      </button>
+        <Link to="/cart" className="cart-total">
+    <FaShoppingCart style={{ marginRight: '8px' }} />
+    Total: ${formatoPrecio(total)}
+  </Link>
     </nav>
   )
 }

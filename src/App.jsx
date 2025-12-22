@@ -3,7 +3,8 @@ import Navbar from './Navbar';
 import Login from './Login';
 import Register from './Register';
 import Home from './Home';
-
+import Cart from './Cart';
+import Pizza from './Pizza';
 
 function App() {
   return (
@@ -13,9 +14,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/pizza/:id" element={<Pizza />} /> {/* nueva ruta */}
       </Routes>
     </Router>
   );
 }
 
-export default App
+export default App;
