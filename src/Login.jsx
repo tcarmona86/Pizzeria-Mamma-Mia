@@ -17,7 +17,7 @@ function Login() {
             return;
         }
         setError('');
-        alert('Autentificación Exitosa ✅');
+        alert('Autentificación Exitosa');
     };
     return (
         <main className="login">

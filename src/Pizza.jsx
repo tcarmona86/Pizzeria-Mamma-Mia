@@ -5,7 +5,6 @@ function Pizza() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Consumimos la API fija por ahora
     fetch("http://localhost:5000/api/pizzas/p001")
       .then((res) => res.json())
       .then((data) => {

@@ -1,4 +1,3 @@
-// src/Cart.jsx
 function Cart() {
   return (
     <div>

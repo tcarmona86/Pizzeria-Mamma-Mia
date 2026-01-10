@@ -22,7 +22,7 @@ function Register() {
             return;
         }
         setError('');
-        alert('Formulario enviado correctamente ✅');
+        alert('Formulario enviado correctamente');
     };
     return (
         <main className="register">
