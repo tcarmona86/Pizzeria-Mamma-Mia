@@ -291,3 +291,135 @@ footer {
 .login-button:hover {
     background-color: #0056b3;
 }
+.cart-page {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-table th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
+.cart-img {
+  width: 80px;
+  border-radius: 8px;
+}
+
+.btn-add,
+.btn-remove {
+  padding: 0.5rem 0.8rem;
+  margin: 0 0.3rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-add {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn-remove {
+  background-color: #f44336;
+  color: white;
+}
+
+.cart-total {
+  margin-top: 2rem;
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.empty-cart {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  color: #888;
+}
+.card-pizza {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+  width: 100%;
+  max-width: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pizza-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.pizza-name {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+  text-align: center;
+  color: #333;
+}
+
+.pizza-price {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.pizza-ingredients {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+  text-align: left;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.pizza-ingredients li {
+  margin-bottom: 4px;
+}
+
+.pizza-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.btn-ver {
+  background-color: #1976d2;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
