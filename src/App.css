@@ -4,14 +4,19 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
+  min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .App {
-  margin: 0;
-  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -43,6 +48,7 @@ html, body {
   border-radius: 4px;
   cursor: pointer;
 }
+
 .nav-btn {
   display: flex;
   align-items: center;
@@ -53,6 +59,10 @@ html, body {
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
+}
+
+.navbar .nav-btn {
+  margin: 0 10px;
 }
 
 .navbar ul {
@@ -85,7 +95,7 @@ html, body {
 }
 
 .header-banner {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
@@ -98,7 +108,7 @@ html, body {
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
 }
 
 .hero-text h1 {
@@ -145,7 +155,7 @@ html, body {
   width: 250px;
   padding: 1rem;
   background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   min-height: 350px;
 }
 
@@ -158,7 +168,7 @@ html, body {
 .pizza-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: auto; 
+  margin-top: auto;
 }
 
 .pizza-buttons button {
@@ -183,118 +193,123 @@ footer {
 }
 
 .register {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    font-family: 'Arial', sans-serif;
-    color: #000000;
-    background-color: #ffffff;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+  color: #000000;
+  background-color: #ffffff;
+  min-height: 100vh;
 }
 
 .container-register {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 400px;
-    border: 1px solid #000000;
-    margin-top: 2rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #000000;
+  margin-top: 2rem;
 }
 
 .register-form label {
-    display: block;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+
 }
 
 .register-form input {
-    width: 100%;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-    background-color: #ffffff;
-    color: #000000;
-    border: 1px solid #000000;
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
 }
 
 .register-button {
-    width: 100%;
-    padding: 0.75rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: pointer;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .register-button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 .login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    font-family: 'Arial', sans-serif;
-    color: #000000;
-    background-color: #ffffff;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+  color: #000000;
+  background-color: #ffffff;
+  min-height: 100vh;
 }
 
 .container-login {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 400px;
-    border: 1px solid #000000;
-    margin-top: 2rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #000000;
+  margin-top: 2rem;
 }
 
 .login-form label {
-    display: block;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+
 }
 
 .login-form input {
-    width: 100%;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-    background-color: #ffffff;
-    color: #000000;
-    border: 1px solid #000000;
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
 }
 
 .login-button {
-    width: 100%;
-    padding: 0.75rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: pointer;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .login-button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
+
 .cart-page {
   padding: 2rem;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .cart-table {
@@ -302,7 +317,6 @@ footer {
   border-collapse: collapse;
   margin-top: 1rem;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .cart-table th,
@@ -310,16 +324,21 @@ footer {
   padding: 1rem;
   text-align: center;
   border-bottom: 1px solid #eee;
+  vertical-align: middle;
 }
 
 .cart-table th {
   background-color: #f8f8f8;
   font-weight: bold;
+  color: #333;
 }
 
 .cart-img {
   width: 80px;
+  height: 80px;
+  object-fit: cover;
   border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 .btn-add,
@@ -347,6 +366,7 @@ footer {
   text-align: right;
   font-size: 1.5rem;
   font-weight: bold;
+  color: #333;
 }
 
 .empty-cart {
@@ -355,10 +375,11 @@ footer {
   margin-top: 2rem;
   color: #888;
 }
+
 .card-pizza {
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   width: 100%;
   max-width: 300px;
@@ -423,3 +444,26 @@ button {
   border-radius: 6px;
   cursor: pointer;
 }
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-left: 1rem;
+}
+
+.session-status {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-left: 1rem;
+}
+
+.logout-message {
+  color: #28a745;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+

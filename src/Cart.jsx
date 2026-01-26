@@ -1,50 +1,53 @@
 import { useContext } from "react";
 import { CartContext } from "./context/CartContext";
-import { formatoPrecio } from './utils/formatoPrecio.js'
+import { UserContext } from "./context/UserContext";
+import { formatoPrecio } from "./utils/formatoPrecio.js";
 
 function Cart() {
-  const { cart, addToCart, removeFromCart, total } = useContext(CartContext);
+  const { cart, total } = useContext(CartContext);
+  const { token } = useContext(UserContext);
 
   return (
     <div className="cart-page">
-      <h1>🛒 Carrito de compras</h1>
+      <h1>Carrito de Compras</h1>
 
       {cart.length === 0 ? (
-        <p className="empty-cart">Tu carrito está vacío.</p>
+        <p className="empty-cart">Tu carrito está vacío 🍕</p>
       ) : (
-        <table className="cart-table">
-          <thead>
-            <tr>
-              <th>Imagen</th>
-              <th>Pizza</th>
-              <th>Precio unitario</th>
-              <th>Cantidad</th>
-              <th>Subtotal</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            {cart.map((pizza) => (
-              <tr key={pizza.id}>
-                <td><img src={pizza.imagen} alt={pizza.name} className="cart-img" /></td>
-                <td>{pizza.name}</td>
-                <td>${formatoPrecio(pizza.precio)}</td>
-                <td>{pizza.cantidad}</td>
-                <td>${formatoPrecio(pizza.precio * pizza.cantidad)}</td>
-                <td>
-                  <button onClick={() => addToCart(pizza)} className="btn-add">➕</button>
-                  <button onClick={() => removeFromCart(pizza.id)} className="btn-remove">➖</button>
-                </td>
+        <>
+          <table className="cart-table">
+            <thead>
+              <tr>
+                <th>Imagen</th>
+                <th>Pizza</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Total</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {cart.map((item, index) => (
+                <tr key={index}>
+                  <td><img src={item.img} alt={item.name} className="cart-img" /></td>
+                  <td>{item.name}</td>
+                  <td>${formatoPrecio(item.price)}</td>
+                  <td>{item.quantity}</td>
+                  <td>${formatoPrecio(item.price * item.quantity)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          <div className="cart-total">
+            <p>Total: ${formatoPrecio(total)}</p>
+            <button 
+              className="pay-button" 
+              disabled={!token}  >
+              Pagar
+            </button>
+          </div>
+        </>
       )}
-
-      <div className="cart-total">
-        <h2>Total: ${formatoPrecio(total)}</h2>
-
-      </div>
     </div>
   );
 }

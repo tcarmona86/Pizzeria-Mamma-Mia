@@ -19,7 +19,7 @@ function CardPizza({ id,name, ingredientes, precio, imagen }) {
       </ul>
       <div className="pizza-buttons">
         <Link to={`/pizza/${id}`} className="btn-ver">Ver Más</Link>
-        <button onClick={() => addToCart({ id, name, precio, ingredientes, imagen })}>
+        <button onClick={() => addToCart({ id, name, price:precio, quantity:1, ingredientes, img: imagen })}>
           Añadir
         </button>
       </div>

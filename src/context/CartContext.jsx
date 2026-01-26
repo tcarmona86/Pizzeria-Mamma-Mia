@@ -11,11 +11,11 @@ export function CartProvider({ children }) {
     if (exists) {
       setCart(
         cart.map((p) =>
-          p.id === pizza.id ? { ...p, cantidad: p.cantidad + 1 } : p
+          p.id === pizza.id ? { ...p, quantity: p.quantity + 1 } : p
         )
       );
     } else {
-      setCart([...cart, { ...pizza, cantidad: 1 }]);
+      setCart([...cart, { ...pizza, quantity: 1 }]);
     }
   };
 
@@ -28,7 +28,7 @@ export function CartProvider({ children }) {
     } else {
       setCart(
         cart.map((p) =>
-          p.id === id ? { ...p, cantidad: p.cantidad - 1 } : p
+          p.id === id ? { ...p, quantity: p.quantity - 1 } : p
         )
       );
     }
@@ -36,7 +36,7 @@ export function CartProvider({ children }) {
 
 
   const total = cart.reduce(
-    (acc, pizza) => acc + pizza.precio * pizza.cantidad,
+    (acc, pizza) => acc + pizza.price * pizza.quantity,
     0
   );
 

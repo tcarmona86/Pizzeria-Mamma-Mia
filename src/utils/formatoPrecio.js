@@ -1,3 +1,6 @@
-export function formatoPrecio(value) {
-  return value.toLocaleString('es-CL'); 
+export function formatoPrecio(precio) {
+  if (typeof precio !== "number") {
+    return "0"; 
+  }
+  return precio.toLocaleString("es-CL");
 }

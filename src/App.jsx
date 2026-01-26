@@ -5,6 +5,8 @@ import Register from './Register';
 import Home from './Home';
 import Cart from "./Cart";
 import Pizza from "./Pizza";
+import ProtectedRoute from "./ProtectedRoute";
+ import RedirectIfAuth from "./RedirectIfAuth";
 
 
 function App() {
@@ -15,7 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/cart" element={<Cart />} /> 
+        <Route path="/cart" element={<Cart />} />
         <Route path="/pizza/:id" element={<Pizza />} />
 
       </Routes>
