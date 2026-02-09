@@ -135,9 +135,7 @@ body {
 }
 
 
-.cart-total {
-  font-weight: bold;
-}
+
 
 .header-banner img {
   width: 100%;
@@ -382,13 +380,7 @@ footer {
   color: white;
 }
 
-.cart-total {
-  margin-top: 2rem;
-  text-align: right;
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #333;
-}
+
 
 .empty-cart {
   text-align: center;
@@ -398,19 +390,6 @@ footer {
 }
 
 
-
-.card-pizza {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  width: 100%;
-  max-width: 300px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 
 .pizza-img {
   width: 100%;
@@ -459,14 +438,6 @@ footer {
   text-decoration: none;
 }
 
-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
 
 .logout-btn {
   background: none;
@@ -477,11 +448,7 @@ button {
   margin-left: 1rem;
 }
 
-.session-status {
-  color: #ccc;
-  font-size: 0.9rem;
-  margin-left: 1rem;
-}
+
 
 .logout-message {
   color: #28a745;
