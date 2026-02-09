@@ -27,6 +27,11 @@ body {
   background-color: #222;
   color: white;
   padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .navbar ul {
@@ -70,6 +75,13 @@ body {
   gap: 1rem;
   list-style: none;
   align-items: center;
+}
+
+.cart-page,
+.home,
+.register,
+.login {
+  padding-top: 80px;
 }
 
 .cart-total {
@@ -304,24 +316,33 @@ footer {
 
 .cart-page {
   padding: 2rem;
-  max-width: 1000px;
-  margin: auto;
+  width: 100%;
+  min-height: calc(100vh - 120px);
+  margin: 0;
   font-family: 'Arial', sans-serif;
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  box-shadow: none;
+  padding-top: 100px;
+}
+
+.cart-page h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
 }
 
 .cart-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
-  background-color: #fff;
+  font-size: 1rem;
 }
 
 .cart-table th,
 .cart-table td {
-  padding: 1rem;
+  padding: 0.8rem;
   text-align: center;
   border-bottom: 1px solid #eee;
   vertical-align: middle;
@@ -330,15 +351,15 @@ footer {
 .cart-table th {
   background-color: #f8f8f8;
   font-weight: bold;
-  color: #333;
+  color: #444;
 }
 
 .cart-img {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 }
 
 .btn-add,
@@ -364,7 +385,7 @@ footer {
 .cart-total {
   margin-top: 2rem;
   text-align: right;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: #333;
 }
@@ -375,6 +396,8 @@ footer {
   margin-top: 2rem;
   color: #888;
 }
+
+
 
 .card-pizza {
   background-color: #fff;
@@ -466,4 +489,31 @@ button {
   margin-top: 0.5rem;
   text-align: center;
 }
-
+.cart-footer {
+  width: 100%;
+  background-color: #007bff; 
+  color: white;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 0;
+  margin-top: 2rem;
+}
+.cart-footer p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.cart-footer .pay-button {
+  background-color: #000;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.cart-footer .pay-button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}

@@ -7,12 +7,37 @@ function Cart() {
   const { cart, total } = useContext(CartContext);
   const { token } = useContext(UserContext);
 
+  const handleCheckout = async () => {
+    try {
+      const res = await fetch("http://localhost:5000/api/checkouts", { 
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`, 
+        },
+        body: JSON.stringify({ cart, total }), 
+      });
+
+      const data = await res.json();
+      if (res.ok) {
+        alert("Compra simulada con éxito");
+        console.log("Checkout:", data);
+
+      } else {
+        alert(data.error || "Error en checkout");
+      }
+    } catch (error) {
+      console.error("Error en checkout:", error);
+      alert("Hubo un problema al procesar el pago");
+    }
+  };
+
+
   return (
     <div className="cart-page">
       <h1>Carrito de Compras</h1>
-
       {cart.length === 0 ? (
-        <p className="empty-cart">Tu carrito está vacío 🍕</p>
+        <p className="empty-cart">Tu carrito está vacío</p>
       ) : (
         <>
           <table className="cart-table">
@@ -37,19 +62,13 @@ function Cart() {
               ))}
             </tbody>
           </table>
-
-          <div className="cart-total">
+          <div className="cart-footer">
             <p>Total: ${formatoPrecio(total)}</p>
-            <button 
-              className="pay-button" 
-              disabled={!token}  >
-              Pagar
-            </button>
+            <button className="pay-button" disabled={!token} onClick={handleCheckout}>Pagar</button>
           </div>
         </>
       )}
     </div>
   );
 }
-
 export default Cart;
